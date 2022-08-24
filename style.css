@@ -1,24 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
 body{
     display: flex;
-    font-family: 'Fira sans', sans-serif;
     justify-content: center;
     align-items: center;
+    font-family: 'Fira sans', sans-serif;
     flex-direction: column;
     background: #224941 url(./bg.jpeg);
-    margin: 0;
+    margin: 0 auto;
     color: #fff;
-    min-height: 100vh;
+    height: 100vh;
     min-width: 375px;
     overflow: hidden;
     background-size: cover;
-    font-size: 2rem;
+    background-repeat: no-repeat;
+    
 }
-
+.body-container{
+    margin: 0 auto;
+}
 h1{
-    margin-bottom: 80px;
+    margin-bottom: 100px;
+    font-size: 32px;
 }
 
 .container{
@@ -27,10 +36,17 @@ h1{
     justify-content: center;
     height: 300px;
     width: 300px;
-    margin: 0;
+    margin: 0 auto;
     position: relative;
     transform: scale(1);
 
+}
+@media (max-width: 448px) {
+    .container{
+        height: 200px;
+        width: 200px;
+    
+    }
 }
 .container.grow{
     animation: grow 3s linear forwards;
@@ -60,6 +76,13 @@ h1{
     position: absolute;
     border-radius: 50%;
 }
+@media (max-width: 448px){
+
+.gradient-circle{
+    max-height: 220px;
+    max-width: 220px;
+}
+}
 
 .circle{
     background-color: #010f1c;
@@ -80,7 +103,18 @@ h1{
     height: 190px;
     animation: rotate 7.5s linear forwards infinite;
     transform-origin: bottom center;
+    /* background-color: #fff; */
 }
+
+@media (max-width: 448px){
+    .pointer-container{
+        position: absolute;
+        top: -50px;
+        left: 90px;
+        width: 20px;
+        height: 150px;
+    }
+    }
 
 .pointer{
     background-color: #fff;
